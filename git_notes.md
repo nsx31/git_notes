@@ -39,3 +39,17 @@ git add file1 file2 files3
 # making a commit
 git commit -m "enter commit message here inside the double quotes"
 ```
+
+# Status & Log : 
+To check the current status of staging area and working directory we ue below command : 
+
+```sh
+git status
+```
+
+To check the commit history we use this command :
+```sh
+git log
+```
+
+# Git Branch
