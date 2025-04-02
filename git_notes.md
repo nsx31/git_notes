@@ -21,7 +21,21 @@ git init
 
 <br>
 
-**Working directory :** Contains all the project files and folders, basically its our workbench.
-**Staging area :** Its a place where we add or remove files, when we are preparing what we want to include in the next saved version of our project (next commit).
-**Commit history :** A commit in Git is basically one version of a project. The commit history is where you can think of your commits existing.
-**Local repository :** Place for storing the files with maintaining the versions of development.
+- **Working directory :** Contains all the project files and folders, basically its our workbench. 
+- **Staging area :** Its a place where we add or remove files, when we are preparing what we want to include in the next saved version of our project (next commit).
+- **Commit history :** A commit in Git is basically one version of a project. The commit history is where you can think of your commits existing.
+- **Local repository :** Place for storing the files with maintaining the versions of development.
+
+# Making A Commit : 
+Making a commit in Git is a two-step process. First, we add the files to the staging area, then we run the commit command and provide a commit message.
+
+```sh
+# to add all files to the staging area
+git add -A 
+
+# add specific files to the staging area
+git add file1 file2 files3
+
+# making a commit
+git commit -m "enter commit message here inside the double quotes"
+```
