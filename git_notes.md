@@ -52,4 +52,71 @@ To check the commit history we use this command :
 git log
 ```
 
-# Git Branch
+# Git Branch :
+**List all local branches :**
+
+```sh
+git branch
+```
+
+**Create a new local branch :**
+
+```sh
+git branch <branch_Name_Here>
+```
+
+**Switch to different local branch :**
+
+```sh
+git switch <enter_branch_name_you_want_to_switch_to>
+```
+
+**Renaming a local branch :** First switch to that branch you want to rename and then run this command :
+```sh
+git branch -m <enter_new_name_here>
+```
+
+# Merging :
+There are two types of merge in git : 
+1. Fast forward merge 
+2. Three way merge
+
+To perform both types of merges, we first need to switch to the branch that we want our feature branch to merge into. In the case of a fast-forward merge, we don’t need to write a merge message whereas in the case of a three-way merge, we have to write a merge message. When performing a three-way merge, you typically don’t need to run `git add` manually unless there are conflicts.
+
+**Fast forward merge :** no new commits were made on the main branch since the feature branch started.
+
+```sh
+git switch main
+git merge features
+```
+
+**Three way merge :** Occurs when both the main branch and the feature branch have diverged (i.e., new commits exist in both branches)
+
+```sh
+git switch main 
+git merge features
+
+# if confict arises resolve that conflict then run
+git add -A
+git commit -m "merged feature branch with main branch"
+```
+
+# Pushing to Remote Repository :
+A local repository can communicate with a remote repository when the local repository has a connection to the remote repository stored within it.
+
+```sh
+git remote add <enter_short_name> <enter_remote_repo_address>
+
+# Example 
+git remote add rb https://github.com/gitlearningjourneyrainbow-remote.git
+```
+
+To push a local branch to your remote repository, you will use the `git push` command and pass in the shortname for the remote repository and the name of the branch that you want to push
+
+```sh
+git push <enter_short_name_here> <branch_name>
+
+# Example 
+# here i am pushing my feature branch to remote repo
+git push rb feature
+```
